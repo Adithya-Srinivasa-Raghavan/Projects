@@ -1,0 +1,15 @@
+Hello,
+
+1. The Crawler randomly takes 20 seeds from the main nz_domain_seeds_list for each seed_list.
+2. The robot exclusion protocol is done to ensure we dont crawl on disallowed pages
+3. The Main Logic of the Code takes into account the requirements such as parsing web-pages(html, htm, php) and excluding any other pages that might be redirecting us into a .pdf, .jpg kind of files. 
+4. A priority queue through a heap is implemented giving priority to higher levels through a Breadth Search and subsequently progressing by levels 
+5. For Adding to the Priority Queue, the program puts the URLs into the heap, with a priority of 0 and the depth. When new links are found on a page, 
+the program checks if they’re allowed and important enough to visit. If they are, they get added to the heap with a priority. Duplicates are also
+checked against the set. Links from new domains(BFS type crawl) are considered as more priority and subdomains get lesser priority.
+6. Data-points such as Page Size, Status Code, the Depth are all written into the file while crawling along with the url's gotten
+7. Overall Metrics are also captured and stored separately
+
+For Adding to the Priority Queue, the program puts the URLs into the heap, with a priority of 0 and the depth. When new links are found on a page, 
+the program checks if they’re allowed and important enough to visit. If they are, they get added to the heap with a priority. Duplicates are also
+checked against the set. Links from new domains are considered as more priority and subdomains get lesser priority.
