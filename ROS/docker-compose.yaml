@@ -9,7 +9,7 @@ services:
     ports:
       - "5001:5001"
     environment:
-      - HUGGINGFACE_HUB_API=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
+      - HUGGINGFACE_HUB_API=<api_key>
     depends_on:
       - mongodb
       - qdrant
@@ -17,7 +17,7 @@ services:
     volumes:
       - .:/usr/src/app
     command: >
-      bash -c "zenml login bfdd0a7c-3926-4552-b5f4-a926e10beeaa && python /usr/src/app/app.py"
+      bash -c "zenml login <login-key> && python /usr/src/app/app.py"
 
   mongodb:
     image: mongo:8.0.1
